@@ -16,6 +16,7 @@ from sklearn.model_selection import train_test_split
 
 digits = load_digits()
 X_train, X_test, y_train, y_test = train_test_split(digits.data, digits.target, train_size=0.75, test_size=0.25)
+
 est = TCUPClassifier(n_base_estimator=14, n_estimator_pool=30, split_ratio=0.1, 
                      subsampling=0.6, n_jobs=-1, cv=3, verbosity=0,
                      tpot_generations=3, tpot_population_size=10, tpot_offspring_size=None,
