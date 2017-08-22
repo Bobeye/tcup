@@ -20,11 +20,11 @@ X_train, X_test, y_train, y_test = train_test_split(digits.data, digits.target, 
 est = TCUPClassifier(n_base_estimator=14, n_estimator_pool=30, split_ratio=0.1, 
                      subsampling=0.6, n_jobs=-1, cv=3, verbosity=0,
                      tpot_generations=3, tpot_population_size=10, tpot_offspring_size=None,
-                 	   tpot_mutation_rate=0.9, tpot_crossover_rate=0.1,
-                 	   tpot_scoring=None, tpot_cv=5, tpot_subsample=1.0, tpot_n_jobs=-1,
-                 	   tpot_max_time_mins=10, tpot_max_eval_time_mins=2,
-                 	   tpot_random_state=None, tpot_config_dict=None, tpot_warm_start=True,
-                 	   tpot_verbosity=0, tpot_disable_update_check=False)
+                     tpot_mutation_rate=0.9, tpot_crossover_rate=0.1,
+                     tpot_scoring=None, tpot_cv=5, tpot_subsample=1.0, tpot_n_jobs=-1,
+                     tpot_max_time_mins=10, tpot_max_eval_time_mins=2,
+                     tpot_random_state=None, tpot_config_dict=None, tpot_warm_start=True,
+                     tpot_verbosity=0, tpot_disable_update_check=False)
 est.fit(X_train, y_train)
 score = est.score(X_test, y_test)
 print ("tcup score: ", score)
